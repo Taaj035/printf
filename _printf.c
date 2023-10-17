@@ -2,27 +2,29 @@
 
 /**
  * _printf - Prints to standard output according to format
- * @format: is a character string. The format string is composed of zero or more directives.
+ * @format: is a character string.
+ * The format string is composed of zero or more directives.
  * Return: The total number of characters printed
  */
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	int print_items = 0;
 
 	va_list args_list;
 
-	if(format == NULL)
+	if (format == NULL)
+
 	{
-		return -1;
+		return (-1);
 	}
 
 	va_start(args_list, format);
 
-	while(*format)
+	while (*format)
 	{
 		if (*format != '%')
 		{
-			write(1, formt, 1);
+			write(1, format, 1);
 			print_items++;
 		}
 		else
@@ -39,6 +41,7 @@ int _printf(const char *format, ...);
 			else if (*format == 'c')
 			{
 				char c = va_arg(args_list, int);
+
 				write(1, &c, 1);
 				print_items++;
 			}
@@ -58,5 +61,5 @@ int _printf(const char *format, ...);
 	}
 	va_end(args_list);
 
-	return print_items;	
-}
+	return (print_items);
+	}

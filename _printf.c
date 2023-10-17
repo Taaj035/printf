@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _printf - Prints to standard output according to format
- * @format: is a character string.
- * The format string is composed of zero or more directives.
- * Return: The total number of characters printed
- */
+  * _printf - Prints to standard output according to format
+  * @format: is a character string.
+  * The format string is composed of zero or more directives.
+  * Return: The total number of characters printed
+  */
 int _printf(const char *format, ...)
 {
 	int print_items = 0;

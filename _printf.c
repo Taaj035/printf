@@ -41,7 +41,6 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 			{
 				char c = va_arg(args_list, int);
-
 				write(1, &c, 1);
 				print_items++;
 			}
@@ -58,5 +57,5 @@ int _printf(const char *format, ...)
 		format++;
 	}
 	va_end(args_list);
-	return (print_items);
+	return print_items;
 }

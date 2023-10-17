@@ -54,8 +54,8 @@ int _printf(const char *format, ...)
 				write(1, str, str_len);
 				print_items += str_len;
 			}
-		format++;
 		}
+		format++;
 	}
 	va_end(args_list);
 	return (print_items);

@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *str = va_arg(args_list, char);
+				char *str = va_arg(args_list, char*);
 				int str_len = 0;
 				while (str[str_len] !=  '\0')
 					str_len++;
@@ -56,7 +56,6 @@ int _printf(const char *format, ...)
 			}
 
 		}
-		format++;
 	}
 	va_end(args_list);
 	return (print_items);

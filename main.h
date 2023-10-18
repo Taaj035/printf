@@ -13,5 +13,4 @@ int print(char *str);
 int _putchar(char c);
 int buffer(char c);
 
-
 #endif

@@ -8,7 +8,7 @@
 
 /* printf.c */
 int _printf(const char *format, ...);
-int print_items(va_list list);
+int print_int(va_list list);
 
 /* util.c */
 char *itoa(long int num, int base);

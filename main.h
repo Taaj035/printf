@@ -17,7 +17,7 @@ int print(char *str);
 
 
 /* _putchar.c */
-int _putchar(char c); 
+int _putchar(char c);
 int buffer(char c);
 
 #endif

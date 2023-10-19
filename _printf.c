@@ -31,14 +31,16 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 			{
 				char c = va_arg(args_list, int);
-				write(1, &c, 1); print_items++;
+				write(1, &c, 1);
+				print_items++;
 			}
 			else if (*format == 's')
 			{
 				char *str = va_arg(args_list, char*);
 				int str_len = 0;
 				while (str[str_len] != '\0')
-					str_len++; write(1, str, str_len);
+					str_len++;
+				write(1, str, str_len);
 				print_items += str_len;
 			}
 		}
